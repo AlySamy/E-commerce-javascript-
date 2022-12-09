@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loge in form</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body style="background-color: #f7f2ef">
+    <!-- Validation Form -->
+    <form id="myForm" method="get">
+      <div class="container">
+        <fieldset>
+          <legend>Loge In</legend>
+          <label for="name"> Name </label>
+          <input type="text" id="name" name="name" onblur="nameValidate()" />
+          <span id="textSpan"> Name is required </span> <br /><br />
+          <label for="email"> Email </label>
+          <input
+            type="Email"
+            id="email"
+            name="email"
+            onblur="emailValidate()"
+          />
+          <span id="emailSpan"> Email is not valid </span>
+          <br /><br />
+          <label for="password"> Password </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            onblur="passwordValidate()"
+          />
+          <span id="passSpan">
+            Password is required and must be 8 chars at least
+          </span>
+          <br /><br />
+          <label onclick="genderValidate()">Gender</label>
+          <input type="radio" name="gender" value="male" id="male" />
+          <label>Male</label>
+          <input type="radio" name="gender" value="female" id="female" />
+          <label>Female</label>
+          <span id="genderSpan">please chose gender</span>
+          <button type="submit" id="submit" onclick="validation(event)">
+            Submit
+          </button>
+          <button type="reset" id="reset">Reset</button>
+        </fieldset>
+      </div>
+    </form>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

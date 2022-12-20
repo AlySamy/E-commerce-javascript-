@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loge in form</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <header class="header">
+    <div class="contaner">
+      <div class="links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="login.html">Log in </a></li>
+          <li>
+            <img class="cart" src="imgs/cart-shopping-solid.svg" alt="" />
+          </li>
+          <li>
+            <p id="cou"></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <body style="background-color: #f7f2ef">
+    <!-- Validation Form -->
+    <div class="divform">
+      <form id="myForm" method="get">
+        <div class="container">
+          <fieldset class="p-5">
+            <legend class="px-3">Log In</legend>
+            <label for="name"> Name </label>
+            <input type="text" id="name" name="name" onblur="nameValidate()" />
+            <span id="textSpan"> Name is required </span> <br /><br />
+            <label for="email"> Email </label>
+            <input
+              type="Email"
+              id="email"
+              name="email"
+              onblur="emailValidate()"
+            />
+            <span id="emailSpan"> Email is not valid </span>
+            <br /><br />
+            <label for="password"> Password </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              onblur="passwordValidate()"
+            />
+            <span id="passSpan">
+              Password is required and must be 8 chars at least
+            </span>
+            <br /><br />
+            <label onclick="genderValidate()">Gender</label>
+            <input type="radio" name="gender" value="male" id="male" />
+            <label>Male</label>
+            <input type="radio" name="gender" value="female" id="female" />
+            <label>Female</label>
+            <span id="genderSpan">please chose gender</span>
+            <div class="mt-3">
+              <button
+                class="btn"
+                type="submit"
+                id="submit"
+                onclick="validation(event)"
+              >
+                Submit
+              </button>
+              <button class="btn" type="reset" id="reset">Reset</button>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer mt-5">
+      <div class="mx-5">
+        <div class="row content-footer">
+          <div class="col-md-4 py-5">
+            <img src="./imgs/cart-shopping-solid.svg" class="mb-4" />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+              minima molestias est, fuga officia reiciendis! Iure tempor!
+            </p>
+          </div>
+          <div class="col-md-2 p-5 company">
+            <h4>Company</h4>
+            <ul>
+              <li>About us</li>
+              <li>Services</li>
+              <li>Contact us</li>
+            </ul>
+          </div>
+          <div class="col-md-2 p-5 account">
+            <h4>Account</h4>
+            <ul>
+              <li>My cart</li>
+              <li>Wisslist</li>
+              <li>Login/Register</li>
+            </ul>
+          </div>
+          <div class="col-md-4 p-5">
+            <h4>Get in touch</h4>
+            <ul>
+              <li>30.6october,eg</li>
+              <li>01018773657</li>
+              <li>wikmedia.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footerCopy"><span>@</span> copy right</div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
